@@ -1,0 +1,84 @@
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-block {
+    display: block;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+$indent-options: 1, 2, 3, 5;
+$multiplier: 5;
+
+@each $option in $indent-options {
+    .m-#{$option} {
+        margin: #{$option * $multiplier}px;
+    }
+    
+    .mx-#{$option} {
+        margin-left: #{$option * $multiplier}px;
+        margin-right: #{$option * $multiplier}px;
+    }
+
+    .my-#{$option} {
+        margin-top: #{$option * $multiplier}px;
+        margin-bottom: #{$option * $multiplier}px;
+    }
+
+    .ml-#{$option} {
+        margin-left: #{$option * $multiplier}px;
+    }
+
+    .mr-#{$option} {
+        margin-right: #{$option * $multiplier}px;
+    }
+
+    .mt-#{$option} {
+        margin-top: #{$option * $multiplier}px;
+    }
+
+    .mb-#{$option} {
+        margin-bottom: #{$option * $multiplier}px;
+    }
+
+    .px-#{$option} {
+        padding-left: #{$option * $multiplier}px;
+        padding-right: #{$option * $multiplier}px;
+    }
+
+    .py-#{$option} {
+        padding-top: #{$option * $multiplier}px;
+        padding-bottom: #{$option * $multiplier}px;
+    }
+
+    .p-#{$option} {
+        padding: #{$option * $multiplier}px;
+    }
+
+    .pl-#{$option} {
+        padding-left: #{$option * $multiplier}px;
+    }
+
+    .pr-#{$option} {
+        padding-right: #{$option * $multiplier}px;
+    }
+
+    .pt-#{$option} {
+        padding-top: #{$option * $multiplier}px;
+    }
+
+    .pb-#{$option} {
+        padding-bottom: #{$option * $multiplier}px;
+    }
+    
+    .gg-#{$option} {
+        grid-gap: #{$option * $multiplier}px;
+    }
+}
