@@ -21,8 +21,13 @@ const router = createRouter({
             path: '/org-login',
             name: 'Organizer login',
             component: () => import('@/pages/organizer/Login.vue'),
-        }
-    ]
-})
+        },
+        {
+            path: '/org/sessions',
+            name: 'Session list',
+            component: () => import('@/pages/organizer/sessions/SessionsList.vue'),
+        },
+    ],
+});
 
 export default router

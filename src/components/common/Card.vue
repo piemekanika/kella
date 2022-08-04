@@ -8,6 +8,8 @@
 
 <style lang="scss">
 .k-card {
-    
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 </style>

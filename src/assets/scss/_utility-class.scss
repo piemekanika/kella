@@ -14,7 +14,7 @@
     font-weight: 500;
 }
 
-$indent-options: 1, 2, 3, 5;
+$indent-options: 1, 2, 4, 3, 5;
 $multiplier: 5;
 
 @each $option in $indent-options {
@@ -81,4 +81,12 @@ $multiplier: 5;
     .gg-#{$option} {
         grid-gap: #{$option * $multiplier}px;
     }
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mb-auto {
+    margin-bottom: auto;
 }
