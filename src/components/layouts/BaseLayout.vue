@@ -1,11 +1,13 @@
-<script setup lang="ts">
-import Card from '@/components/common/Card.vue';
-</script>
-
 <template>
     <main class="layout layout--base">
-        <Card>
-            <slot></slot>
-        </Card>
+        <slot></slot>
     </main>
 </template>
+
+<style lang="scss">
+.layout {
+    &--base {
+        padding: 2rem 1rem;
+    }
+}
+</style>

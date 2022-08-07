@@ -3,6 +3,7 @@ import Card from '@/components/common/Card.vue';
 import SessionListItem from '@/pages/organizer/sessions/components/SessionListItem.vue';
 import Button from '@/components/common/Button.vue';
 import {useRouter} from 'vue-router';
+import BaseLayout from "@/components/layouts/BaseLayout.vue";
 
 const list: number[] = [
     1,
@@ -19,7 +20,7 @@ function logout() {
 </script>
 
 <template>
-    <div class="d-grid gg-4">
+    <BaseLayout class="d-grid gg-4">
         <Card>
             <Button @click="logout">logout</Button>
         </Card>
@@ -42,5 +43,5 @@ function logout() {
                 <hr v-if="index !== lastIndex" class="my-4">
             </template>
         </Card>
-    </div>
+    </BaseLayout>
 </template>

@@ -4,13 +4,25 @@ import Input from '@/components/common/Input.vue';
 import Button from '@/components/common/Button.vue';
 
 import { useRouter } from 'vue-router';
+import { reactive } from 'vue'; 
+import {api} from "@/api";
 
-let username = '';
-let password = '';
+const state = reactive({
+    username: '',
+    password: '',
+});
+
 const router = useRouter();
 
 function handleClick() {
-    router.push('org/sessions');
+    api.login({
+        username: state.username,
+        password: state.password,
+    })
+        .then(() => {
+            router.push('org/sessions');
+        })
+        .catch(e => alert(e.message))
 }
 </script>
 
@@ -21,8 +33,8 @@ function handleClick() {
                 Organizer login
             </div>
             
-            <Input v-model="username" />
-            <Input v-model="password" type="password" />
+            <Input v-model="state.username" />
+            <Input v-model="state.password" type="password" />
 
             <Button class="mt-2" @click="handleClick">
                 Login
